@@ -37,4 +37,7 @@ then
 elif [ "$CONTRACT" = "VRFConsumer" ]
 then 
     arguments="$keyHash $vrf_coordinator $link_token $fee"
+elif [ "$CONTRACT" = "DappLottery" ]
+then 
+    arguments="$keyHash $vrf_coordinator $link_token $fee"
 fi 
