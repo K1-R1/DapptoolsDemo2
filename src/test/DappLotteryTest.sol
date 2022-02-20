@@ -25,4 +25,10 @@ contract DappLotteryTest is DSTest {
             fee
         );
     }
+
+    function test_lottery_can_start() public {
+        linkToken.transfer(address(DappLottery), 1 * 10**18);
+        bytes32 requestId = dappLottery.startLottery();
+        assertTrue(requestId != "0x");
+    }
 }
